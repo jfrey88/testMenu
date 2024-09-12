@@ -19,7 +19,12 @@
     const props = defineProps({
       isCreate: Boolean,
     });
+
+    const emit = defineEmits(["update:modelValue"]);
     const afficherBonsoir =  () => {
-      console.log("Bonsoir");
+      console.log("Bonsoir",props);
+      emit("update:modelValue");
   };
+  
+</script>
   

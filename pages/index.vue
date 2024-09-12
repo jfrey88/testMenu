@@ -3,9 +3,11 @@
   <v-btn class="ma-3" @click="ouvreMenu2()"> Menu 2 </v-btn>
   <v-btn class="ma-3" @click="ouvreMenu3()"> Menu 3 </v-btn>
 
-  <Menu1 v-model="dialogStatusMenu1" />
-  <Menu2 v-model="dialogStatusMenu2" />
-  <Menu3 v-model="dialogStatusMenu3" />
+  <DialogMenu1 v-model="dialogStatusMenu1" />
+  <DialogMenu2 v-model="dialogStatusMenu2" />
+  <DialogMenu3 
+    v-model="dialogStatusMenu3" 
+    @update:model-value="dialogStatusMenu3 = false" /> 
 </template>
 
 

@@ -6,7 +6,7 @@
     
           <v-card-actions>
     
-            <v-btn text="Non" @click="isActive.value = false"></v-btn>
+            <v-btn text="Non" @click="emit('update:modelValue', false)"></v-btn>
             <v-btn text="Oui" @click="afficherBonnejournee()"></v-btn>
             
           </v-card-actions>
@@ -19,7 +19,11 @@
     const props = defineProps({
       isCreate: Boolean,
     });
+
+    const emit = defineEmits(["update:modelValue"]);
+
     const afficherBonnejournee =  () => {
       console.log("Bonne journée");
+      emit("update:modelValue", false);
   };
-  
+</script>
